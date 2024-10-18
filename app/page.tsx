@@ -10,7 +10,7 @@ import {
   NavigationMenuViewport,
 } from "@/app/components/ui/navigation-menu";
 
-const Home = () => {
+const Home = () => {//Oi
   return (
     <div>
       <div className="bg-slate-700 block h-[100px] ">
