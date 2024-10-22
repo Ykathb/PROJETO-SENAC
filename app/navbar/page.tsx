@@ -1,12 +1,11 @@
 import { Input } from "@/app/components/ui/input";
-import { Button } from "../button/button";
-
+import { Button } from "@/components/ui/button";
 
 export function InputWithButton() {
-    return (
-      <div className="flex w-full max-w-sm items-center space-x-2">
-        <Input type="email" placeholder="Email" />
-        <Button type="submit">Buscar</Button>
-      </div>
-    )
-  }
+  return (
+    <div className="flex w-full max-w-sm items-center space-x-2">
+      <Input type="email" placeholder="Email" />
+      <Button type="submit">Buscar</Button>
+    </div>
+  );
+}
