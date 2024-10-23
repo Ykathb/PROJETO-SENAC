@@ -1,5 +1,4 @@
 import * as React from "react";
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -7,29 +6,28 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/app/components/ui/carousel";
 
 export function CarouselSize() {
   return (
     <Carousel
       opts={{
-        align: "start",
+        align: "start", // Mantém o alinhamento à esquerda
+        loop: true,
       }}
-      className="w-full max-w-sm"
+      className="w-full max-w-sm" // Mantenha isso para garantir que o carrossel use a largura total
     >
-      <CarouselContent>
+      <CarouselContent className="flex justify-start">
+        {" "}
+        {/* Alinhado à esquerda */}
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <Image
-                    src={`/image/gato${index + 1}.jfif`}
-                    alt={`Imagem ${index + 1}`}
-                    width={100}
-                    height={100}
-                    className="object-cover"
-                  />
+                <CardContent className="flex aspect-square items-center justify-start p-6">
+                  {" "}
+                  {/* Alinhado à esquerda */}
+                  <span className="text-3xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
             </div>

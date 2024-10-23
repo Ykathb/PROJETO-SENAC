@@ -63,7 +63,7 @@
   }
 
   .banner {
-    background-image: url("images/fiquei de xereca.jfif");
+    background-image: url("https://placehold.co/1920x1080");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,8 +72,6 @@
 
   }
 }
-
-
 
 .largeText {
   font-size: 50px;
