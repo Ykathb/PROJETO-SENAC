@@ -1,41 +1,51 @@
-import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/app/components/ui/carousel";
+import CarouselItemComponent from "@/app/CarouselItemComponent"; // Ajuste o caminho conforme necessário
 
-export function CarouselSize() {
+const items = [
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 1",
+  },
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 2",
+  },
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 3",
+  },
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 4",
+  },
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 5",
+  },
+  {
+    src: "https://placehold.co/200x180",
+    alt: "Item 6",
+  },
+];
+
+export default function Example() {
   return (
-    <Carousel
-      opts={{
-        align: "start", // Mantém o alinhamento à esquerda
-        loop: true,
-      }}
-      className="w-full max-w-sm" // Mantenha isso para garantir que o carrossel use a largura total
-    >
-      <CarouselContent className="flex justify-start">
-        {" "}
-        {/* Alinhado à esquerda */}
-        {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-start p-6">
-                  {" "}
-                  {/* Alinhado à esquerda */}
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
+    <Carousel>
+      <CarouselContent className="flex">
+        {/* Renderizando itens com tamanho ajustado */}
+        {items.map((item, index) => (
+          <CarouselItemComponent key={index} src={item.src} alt={item.alt} />
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="absolute left-2 z-10" />
+      <CarouselNext className="absolute right-2 z-10" />
     </Carousel>
   );
 }

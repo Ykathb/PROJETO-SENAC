@@ -81,3 +81,27 @@ export {
   CardDescription,
   CardContent,
 };
+
+export function CarouselSize() {
+  return (
+    <div className="flex w-full justify-start space-x-4 overflow-x-auto">
+      {/* Contêiner flexível com rolagem horizontal */}
+      <div className="flex space-x-4">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <div key={index} className="h-[200] min-w-[400px]">
+            {/* Aumentei o tamanho mínimo do card */}
+            <Card>
+              <CardContent className="flex aspect-square items-center justify-center p-6">
+                <span className="text-3xl font-semibold">{index + 1}</span>
+              </CardContent>
+              {/* Texto adicionado abaixo do Card */}
+              <div className="p-4 text-center">
+                <p className="text-lg">Texto abaixo do Card {index + 1}</p>
+              </div>
+            </Card>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

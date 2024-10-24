@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Menubar,
   MenubarContent,
@@ -9,7 +11,7 @@ import {
 } from "@/app/components/ui/menubar";
 import { InputWithButton } from "./navbar/page";
 import { Button } from "@/components/ui/button";
-import { CarouselSize } from "./carousel.page/page";
+import Example from "./carousel.page/page";
 
 function Home() {
   return (
@@ -84,8 +86,8 @@ function Home() {
       {/* FIM DIV BANNER */}
 
       {/* COMEÇO DIV ITEMS */}
-      <div className="flex flex-grow justify-center">
-        <CarouselSize />
+      <div className="m-[30px] flex h-[50px] justify-start p-3">
+        <Example />
       </div>
       {/* FIM DIV ITEMS */}
     </div>

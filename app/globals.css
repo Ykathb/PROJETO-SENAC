@@ -72,6 +72,17 @@
 
   }
 }
+.carousel-item {
+  width: 50px; /* Defina a largura desejada */
+  height: 150px; /* Igual à largura para manter a forma quadrada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee; /* Cor de fundo dos itens */
+  margin: 10px; /* Espaçamento entre os itens */
+  border-radius: 8px; /* Bordas arredondadas, se desejado */
+}
+
 
 .largeText {
   font-size: 50px;
